@@ -19,12 +19,12 @@ import { Button } from '@material-ui/core';
 
 function App() {
   const [savedItems, setSavedItems] = useState([])
-  
+
   return (
     <div className="App">
       <Sidebar />
       <span className="title">
-        Hello<br />Esther!
+        Hello<br />User!
           </span>
       <Expense onSave={newItem=> {
         setSavedItems([...savedItems, newItem])
@@ -65,7 +65,7 @@ function Expense({onSave}) {
     <>
       <div className="panel expenses">
         <h2 className="panel-title">
-          {today.getMonth()}/{today.getDate()}<br />
+          {today.getMonth()+1}/{today.getDate()}<br />
           Today's Expenses
         </h2>
 
@@ -215,19 +215,33 @@ function Grids({onSelect, category}) {
 
 function Entries({items}) {
   const today = new Date();
-  var hours = new Date().getHours()
-  var min = new Date().getMinutes()
 
   return (
     <div className="panel entries">
       <h2 className="panel-title">
-        {today.getMonth()}/{today.getDate()}<br />
+        {today.getMonth()+1}/{today.getDate()}<br />
         Today's Entries
-    </h2>
+      </h2>
+      <div className="category-title">
+          <h3>Time</h3> 
+          <h3>Category</h3> 
+          <h3>Cost</h3>
+      </div>
+      
     <div>
       {items.map(item=>{
-        return <div>
-          <div>{hours}:{min} {item.category} {item.number}</div>
+        return <div className="entry-section">
+          <div className="entry-line">
+            <h5 className="entry-text">
+              {today.getHours()}:{today.getMinutes()} 
+            </h5>
+            <h5 className="entry-text">
+            {item.category}
+            </h5>
+            <h5 className="entry-amount">
+            {item.number}
+            </h5>
+          </div>
         </div>
       })}
     </div>
