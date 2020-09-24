@@ -11,7 +11,6 @@ body,html,#root {
   right:0;
   margin:0;
   height:100vh;
-  
 }
 
 .title {
@@ -61,18 +60,18 @@ body,html,#root {
 
 .panel {
   background-color: #fff;
-  margin: 30px;
+  margin: 40px;
   margin-right: 0;
-  flex-basis: 1;
   width: 100%;
   border-radius: 30px;
   padding: 35px;
+
 }
 
 .panel:last-child {
   margin-right: 40px;
   max-height:calc(100vh - 120px);
-  overflow:scroll;
+  overflow-y:scroll;
 }
 
 .panel-title {
@@ -157,23 +156,39 @@ body,html,#root {
 
 .entry-text {
   font-size: 24px;
-  margin:0px 0px 1em 0px;
+  margin:0px 0px 1.5em 0px;
 }
 
 .entry-amount {
   font-size: 24px;
-  margin:0px 0px 1em 0px;
+  margin:0px 0px 1.5em 0px;
   color:#CD3B20;
 }
 
 .entry-line {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  /* justify-content: space-between; */
+  margin-top: 1.5em;
+  border-bottom: solid 1px #9B9B9B;
 }
 
-.entry-section {
-  overflow-y: scroll;
+.entry-line .entry-text {
+  display: flex;
+  justify-self: start;
+}
+
+.entry-line .entry-text2 {
+  display: flex;
+  justify-self: center;
+  font-size: 24px;
+  margin:0px 0px 1.5em 0px;
+}
+
+.entry-line .entry-amount {
+  display: flex;
+  justify-self: end;
 }
 
 .line {

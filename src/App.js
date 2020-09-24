@@ -225,7 +225,7 @@ function Entries({items}) {
       <div className="category-title">
           <h3>Time</h3> 
           <h3>Category</h3> 
-          <h3>Cost</h3>
+          <h3>Cost $</h3>
       </div>
       
     <div>
@@ -235,7 +235,7 @@ function Entries({items}) {
             <h5 className="entry-text">
               {today.getHours()}:{today.getMinutes()} 
             </h5>
-            <h5 className="entry-text">
+            <h5 className="entry-text2">
             {item.category}
             </h5>
             <h5 className="entry-amount">
