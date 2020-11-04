@@ -1,4 +1,4 @@
-# Quote Creator
+# Budgeter
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Firebase Hosting URL: https://react-budget-expense-tracker.web.app/
